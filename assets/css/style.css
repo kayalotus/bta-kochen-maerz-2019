@@ -10,24 +10,80 @@ body {
 }
 
 ul {
-  padding: 30px;
+  padding: 0px;
   list-style-type: none;
 }
 
-a {
-color: #000;
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.4s ease;
 }
 
-nav a:link{
-  text-decoration: none;
+nav a:hover{
+  color: #66ff99;
 }
 
 /* IDs in HTML werden in CSS zu einem # */
 
-#lieblingslink {
-  color: pink;
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.container {
-  background: blue;
+#navigation {
+  display: none;
+}
+
+#navigation.show {
+  display: block;
+}
+
+#burger {
+  border: none;
+  background: transparent;
+
+}
+
+#hero {
+  background-image: url(../img/intro.jpg);
+
+}
+
+/* ICH, DIANA habe das Folgende mit der uppercase bold Navigation so gelöst, man kann das auch weiter oben durch nav a definieren. Letzteres hat Dozent Markus so gemacht.
+
+#navigation {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+*/
+
+
+@media (min-width: 1024px) {
+  #burger {
+    display: none;
+  }
+
+  #navigation {
+    display: block;
+  }
+
+  nav li {
+    float: left;
+    margin-left: 30px;
+    /* ICH, DIANA, habe das folgende Padding hinzugefügt damit es besser aussieht
+    padding-right: 50px; */
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
 }
