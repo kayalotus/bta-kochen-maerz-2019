@@ -52,10 +52,79 @@ nav a:hover{
 
 #hero {
   background-image: url(../img/intro.jpg);
+  /* vh steht für viewport height -- neue Info ! es könnte auch 1vh sein, das wäre dann 1/100stel von der gesamten Viewport-Größe */
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Ich habe das so gemacht statt mit der hero.box aber ich mache das jetzt erstmal so weiter wie Markus das gelöst hat
+  color: white;
+  text-align: center; */
+}
+
+.hero-box {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
 
 }
 
-/* ICH, DIANA habe das Folgende mit der uppercase bold Navigation so gelöst, man kann das auch weiter oben durch nav a definieren. Letzteres hat Dozent Markus so gemacht.
+.button {
+ background: white;
+ border-radius: 4px;
+ padding: 15px 32px;
+ color: #374a67;
+ text-transform: uppercase;
+ text-decoration: none;
+ font-weight: bold;
+ box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
+ border: 1px solid #374a67;
+ transition: 2s all ease;
+ display: inline-block;
+ margin-top: 20px;
+ cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  background: #374a67;
+}
+
+
+.hero-box p {
+  font-size: 16px;
+}
+
+
+.card img {
+  width: 100%;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ich muss den ganzen Pfad ansprechen, ich hatte nicht an das a in der card gedacht */
+.card p a, .card-text {
+  color: #828282;
+}
+
+.card {
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man kann das auch weiter oben durch nav a definieren. Letzteres hat Dozent Markus so gemacht.
 
 #navigation {
   text-transform: uppercase;
