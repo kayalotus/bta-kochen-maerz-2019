@@ -102,6 +102,10 @@ nav a:hover{
 
 .card img {
   width: 100%;
+  /* ***********************************DAS HABE ICH GEMACHT ****************************
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  */
 }
 
 .card a {
@@ -110,16 +114,44 @@ nav a:hover{
 }
 
 /* ich muss den ganzen Pfad ansprechen, ich hatte nicht an das a in der card gedacht */
-.card p a, .card-text {
+.card p a, .card-text {   /* card text ist eine zweite Option, man muss nicht beides stylen */
   color: #828282;
 }
 
 .card {
   text-align: center;
+    /* ***********************************DAS HABE ICH GEMACHT **************************** */
+  border-radius: 15px;
+  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
+  overflow: hidden;
 }
 
+.card p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
+.card .button {
+  background: #374a67;
+  border-radius: 4px;
+  padding: 15px 32px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
+  border: 1px solid #374a67;
+  transition: 2s all ease;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;  /* 1 rem ist 16 pixel */
+  width: 90%;
+}
 
+.card .button:hover {
+  color: #374a67;
+  background: white;
+}
 
 
 
