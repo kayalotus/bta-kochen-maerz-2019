@@ -176,14 +176,11 @@ ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man 
 
 }
 */
-
 .widget {
   background-color: #04122B;
   color: #fff;
   padding: 1rem;
   text-align: center;
-
-
 }
 
 .newsletter-input {
@@ -200,23 +197,23 @@ ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man 
   display: inline-block;
   margin-top: 20px;
   cursor: pointer;
-
   max-width: 100%;
   clear: both;
 }
 
-
 .icon-facebook, .icon-instagram, .icon-youtube {
   font-size: 2rem;
+  display: inline-block;
+  /* bin mir nicht sicher ob inline-block oder inline */
 }
 
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-
+.footer-nav {
+  text-align: center;
 }
 
+#nav-social {
+  text-align: center;
+}
 
 /* für Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -230,6 +227,15 @@ ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man 
     /* steht oben schon bei card, kann man zur Sicherheit und zum Nachvollziehen aber auch in beide schreiben */
     flex: 1 1 calc(50% - 2rem);
   }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
 }
 
 /* für Desktops */
@@ -259,4 +265,10 @@ ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man 
   .card {
     flex: 1 1 calc(33.3333333333% - 2rem);
   }
-}
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 2rem;
+  }
