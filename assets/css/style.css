@@ -14,7 +14,6 @@ ul {
   list-style-type: none;
 }
 
-
 nav a {
   color: #000;
   text-decoration: none;
@@ -23,12 +22,11 @@ nav a {
   transition: color 0.4s ease;
 }
 
-nav a:hover{
-  color: #66ff99;
+nav a:hover {
+  color: grey;
 }
 
 /* IDs in HTML werden in CSS zu einem # */
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -47,7 +45,6 @@ nav a:hover{
 #burger {
   border: none;
   background: transparent;
-
 }
 
 #hero {
@@ -70,23 +67,22 @@ nav a:hover{
   left: 50%;
   transform: translate(-50%);
   width: 100%;
-
 }
 
 .button {
- background: white;
- border-radius: 4px;
- padding: 15px 32px;
- color: #374a67;
- text-transform: uppercase;
- text-decoration: none;
- font-weight: bold;
- box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
- border: 1px solid #374a67;
- transition: 2s all ease;
- display: inline-block;
- margin-top: 20px;
- cursor: pointer;
+  background: white;
+  border-radius: 4px;
+  padding: 15px 32px;
+  color: #374a67;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.6);
+  border: 1px solid #374a67;
+  transition: 2s all ease;
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -94,11 +90,9 @@ nav a:hover{
   background: #374a67;
 }
 
-
 .hero-box p {
   font-size: 16px;
 }
-
 
 .card img {
   width: 100%;
@@ -114,16 +108,19 @@ nav a:hover{
 }
 
 /* ich muss den ganzen Pfad ansprechen, ich hatte nicht an das a in der card gedacht */
-.card p a, .card-text {   /* card text ist eine zweite Option, man muss nicht beides stylen */
+.card p a, .card-text {
+  /* card text ist eine zweite Option, man muss nicht beides stylen */
   color: #828282;
 }
 
 .card {
   text-align: center;
-    /* ***********************************DAS HABE ICH GEMACHT **************************** */
+  /* ***********************************DAS HABE ICH GEMACHT **************************** */
   border-radius: 15px;
-  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.6);
   overflow: hidden;
+  margin: 1rem;
+  /* border: solid black 1px;  ich habe hier mal eine Border zum besseren Sehen der Card gemacht */
 }
 
 .card p {
@@ -139,12 +136,13 @@ nav a:hover{
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.6);
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.6);
   border: 1px solid #374a67;
   transition: 2s all ease;
   display: inline-block;
   cursor: pointer;
-  margin: 1rem;  /* 1 rem ist 16 pixel */
+  margin: 1rem;
+  /* 1 rem ist 16 pixel */
   width: 90%;
 }
 
@@ -153,10 +151,8 @@ nav a:hover{
   background: white;
 }
 
-
-
-
-/* ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man kann das auch weiter oben durch nav a definieren. Letzteres hat Dozent Markus so gemacht.
+/*
+ICH, DIANA, habe das Folgende mit der uppercase bold Navigation so gelöst, man kann das auch weiter oben durch nav a definieren. Letzteres hat Dozent Markus so gemacht.
 
 #navigation {
   text-transform: uppercase;
@@ -164,8 +160,79 @@ nav a:hover{
 }
 
 */
+#rezepte h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  /* ganz oben steht schon mal im Container display: flex; */
+  flex-wrap: wrap;
+}
+
+/*
+.card {
+  width: 100%;
+
+}
+*/
+
+.widget {
+  background-color: #04122B;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 
 
+}
+
+.newsletter-input {
+  background: white;
+  border-radius: 4px;
+  padding: 15px 32px;
+  color: #374a67;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.6);
+  border: 1px solid #374a67;
+  transition: 2s all ease;
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+
+  max-width: 100%;
+  clear: both;
+}
+
+
+.icon-facebook, .icon-instagram, .icon-youtube {
+  font-size: 2rem;
+}
+
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+/* für Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 1rem;
+    /* steht oben schon bei card, kann man zur Sicherheit und zum Nachvollziehen aber auch in beide schreiben */
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+/* für Desktops */
 @media (min-width: 1024px) {
   #burger {
     display: none;
@@ -178,13 +245,18 @@ nav a:hover{
   nav li {
     float: left;
     margin-left: 30px;
-    /* ICH, DIANA, habe das folgende Padding hinzugefügt damit es besser aussieht
+    /* ICH habe das folgende Padding hinzugefügt damit es besser aussieht
     padding-right: 50px; */
   }
 
   .container {
     width: 90%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
+  .card {
+    flex: 1 1 calc(33.3333333333% - 2rem);
+  }
 }
